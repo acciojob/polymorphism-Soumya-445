@@ -1,10 +1,8 @@
 package com.driver;
 
-import java.util.Scanner;
-
+import java.util.*;
 public class Main {
-
-    static class Product {
+    public static class Product {
         public int product(int x, int y) {
             return x * y;
         }
@@ -17,33 +15,12 @@ public class Main {
             return x * y;
         }
     }
-
     public static void main(String[] args) {
+        Product p = new Main.Product();
+        System.out.println(p.product(1, 2));
 
-        Scanner sc = new Scanner(System.in);
-        Product p = new Product();
+        System.out.println(p.product(1, 2, 3));
 
-        System.out.print("Enter first integer: ");
-        int a = sc.nextInt();
-
-        System.out.print("Enter second integer: ");
-        int b = sc.nextInt();
-
-        System.out.println("Product of two integers: " + p.product(a, b));
-
-        System.out.print("Enter third integer: ");
-        int c = sc.nextInt();
-
-        System.out.println("Product of three integers: " + p.product(a, b, c));
-
-        System.out.print("Enter first double: ");
-        double d1 = sc.nextDouble();
-
-        System.out.print("Enter second double: ");
-        double d2 = sc.nextDouble();
-
-        System.out.println("Product of two doubles: " + p.product(d1, d2));
+        System.out.println(p.product(2.2, 4.4));
     }
 }
-
-    
